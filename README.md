@@ -42,3 +42,27 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## 使用するライブラリ
+
+### axios
+
+REST API の通信を簡単に記述できるライブラリ。
+fetch と axios の違いについては以下がわかりやすくまとめられている。
+https://shimablogs.com/fetch-api-axios-difference
+
+### formik
+
+React で使えるフォームの管理をしてくれるイケてるライブラリです。  
+Formik とは、 React で form をより簡単で簡潔に実装できるようにしてくれるライブラリーです。  
+Formik の特徴として、
+
+1. form の value を管理してくれる
+2. エラーのハンドリングと管理もできる
+3. バリデーションを簡単に設定できる
+4. onChange や onSubmit などのイベントハンドラを提供してくれる
+5. id もしくは、name 属性を与えることで、どの要素を変更したのかの検知ができる
+
+### yup
+
+formik と連携してバリデーションチェックをしてくれるイケてるやつです。

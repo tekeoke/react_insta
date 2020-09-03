@@ -1,9 +1,11 @@
-import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import authReducer from "../features/auth/authSlice";
+import postReducer from "../features/post/postSlice";
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    auth: authReducer,
+    post: postReducer,
   },
 });
 
@@ -14,3 +16,6 @@ export type AppThunk<ReturnType = void> = ThunkAction<
   unknown,
   Action<string>
 >;
+
+// dispatchに対しても型を定義し、コンポーネントから使えるようにする必要がある
+export type AppDispatch = typeof store.dispatch;
